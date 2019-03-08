@@ -9,7 +9,6 @@ python:
 
 
 install:
-  - pip install operator
   - pip install unittest
 
 script:
