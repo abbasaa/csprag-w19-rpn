@@ -1,4 +1,16 @@
 language: python
 
-rvm: 
+python: 
   - 3.5
+
+
+
+
+
+
+install:
+  - pip install operator
+  - pip install unittest
+
+script:
+  -python3 -m unittest
