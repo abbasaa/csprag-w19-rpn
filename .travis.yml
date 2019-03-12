@@ -1,3 +1,4 @@
+sudo: false
 language: python
 
 python: 
@@ -8,6 +9,6 @@ install:
   - pip install codecov
 script:
   coverage run -m unittest
-after-success:
+after_success:
   - coverall
   - codecov
