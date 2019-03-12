@@ -4,11 +4,9 @@ python:
   - 3.5
 
 install:
-  pip install codecov
   pip install coveralls
 script:
   coverage run -m unittest
 
 after-success:
-  codecov
   coveralls
