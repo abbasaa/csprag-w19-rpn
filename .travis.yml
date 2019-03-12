@@ -6,10 +6,8 @@ python:
 
 install:
   - pip install colored --upgrade
-  - pip install python-coveralls
   - pip install codecov
 script:
   coverage run -m unittest
 after_success:
-  - coverall
   - codecov
