@@ -2,7 +2,8 @@
 
 import readline
 import operator
-
+import colored
+from colored import stylize
 
 operators = {
     '+': operator.add,
@@ -21,8 +22,10 @@ def calculate(myarg):
             stack.append(token)
         except ValueError:
             function = operators[token]
+            
             arg2 = stack.pop()
             arg1 = stack.pop()
+            print(stylize(arg1, colored.fg("royal_blue_1")) + " " + stylize(token, colored.fg("magenta"))+ " " + stylize(arg2, colored.fg("light_red")))
             result = function(arg1, arg2)
             stack.append(result)
         print(stack)
