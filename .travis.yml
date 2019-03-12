@@ -6,7 +6,7 @@ python:
 install:
   pip install codecov
 script:
-  coverage -m unittest
+  coverage run -m unittest
 
 after-success:
   codecov
